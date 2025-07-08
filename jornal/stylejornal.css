@@ -1,0 +1,102 @@
+.t{
+    font-size: 280%;
+    font-family: Impact;
+    text-align: center;
+}
+
+.text{
+  font-size: x-large;
+  font-family: serif;
+  font-style: oblique;
+}
+
+.textfn{
+  font-size: 200%;
+  font-family: serif;
+  font-style: oblique;
+}
+
+.dtnm{
+  font-family: Comic Sans MS;
+  text-align: right;
+}
+
+.tum
+{
+  font-size: 260%;
+  font-family: monospace;
+  color: rgb(32, 32, 32);
+  font-style: oblique;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* lay flexiveis, direção da esquerda para direita, deixa alinhado separadamente com espaços iguais e deixa organizado juntos */
+  
+.tooltip {
+  position: relative;
+  border-bottom: 1px dotted black; 
+  cursor: help;
+  margin-bottom: 10px; 
+}
+/*  sobrepoe entre si, linha pontilhada embaixo do texto, cursor aparece interrogação e adiciona espaço entre as informações*/
+  
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -1%; 
+  left: 80%;
+  transform: translateX(-50%); 
+}
+/*  feito para o sistema da decifração, tamanho, cor do fundo e letra, onde ficaria alinhado dentro desse quadrado, tamanho da borda
+e formato "aspecto 3D", posição compacta das escritas uma abaixo da outra, o quanto acima o texto decifrado fica sobrepondo, quão de
+posição abaixo o texto decifrado fica, centraliza a informação do texto decifrado e centraliza o texto decifrado horizontalmente */
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* hover é utilizado para ativar um elemento por meio de alguma ação de usuário, nesse caso, quando passado o mouse em cima 
+do elemento. Visibility com a opção visivel para aparecer o texto decifrado e não ocultar.*/
+
+.video-container {
+  width: 50%; 
+ margin-left: 100px;
+}
+
+.botao {
+    align-items: flex-end;
+    padding: 10px 25px;
+    background-color: #5f5f5f;
+    color: white;
+    border: none;
+    gap: 10x;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao:hover,
+.botao:active {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.containerjornal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px; 
+}

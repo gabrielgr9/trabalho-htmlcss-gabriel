@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulário de Contato</title>
+  <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <div class="container">
+    <button class="botao" onclick="window.location.href='../index.html'">Sobre Mim</button>
+    <button class="botao" onclick="window.location.href='../formação/formacao.html'">Trajetória</button>
+    <button class="botao" onclick="window.location.href='../jornal/jornal.html'">Jornal Feito por Mim</button>
+    <button class="botao" onclick="window.location.href='../contato/formulario.html'">Contatos</button>
+  </div>
+  <br>
+  <br>
+  <div class="form-container"> <!--Formulario criado usando o JS para limpar após enviar formulário-->
+    <h1>Entre em Contato Comigo</h1>
+    <form>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="exemplo@email.com" required>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); 
+
+    const nome = document.getElementById("nome").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    if (!nome || !telefone || !email || !mensagem) {
+      alert("Por favor, preencha todos os campos antes de enviar.");
+      return;
+    }
+
+    // aparece mensagem de sucesso
+    alert("Mensagem enviada com sucesso! Obrigado pelo contato.");
+
+    // limpa o formulário
+    form.reset();
+  });
+</script>
+</body>
+</html>
